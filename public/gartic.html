@@ -1,0 +1,374 @@
+<script>
+    var pAnterior = document.referrer;
+    if(! pAnterior.includes("loginGartic")){
+        window.location="loginGartic.html";
+    }
+</script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="#"> <!--Concerta erro favicon-->
+    <link rel="icon" type="image/x-icon" href="/imagens/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <title>Gartic</title>
+</head>
+<body onload="carregaUser()">
+
+    <header class="headerChat">
+        <div class="esquerdaHeader">
+            <h2>Hora do jogo!</h2>
+            <input type="text" id="nome" readonly class="inputInvisivel">
+        </div>
+        <div id="EscolhidoFerramentas" class="direita">
+            <div class="suaVez">
+                <h3>Sua vez!</h3>
+                <input type="text" id="headerPalavra" readonly class="inputInvisivel">
+            </div>
+            <div class="ferramentas">
+                <p>Ferramentas</p>
+                <div class="containerFerramentas">
+                    <div>
+                        <label for="inputColor">Cor</label>
+                        <input type="color" id="inputColor">
+                    </div>
+                    <div>
+                        <label for="borracha">Borracha</label>
+                        <input type="image" src="imagens/borracha.png" onclick="borracha()" id="borracha">
+                    </div>
+                    <div>
+                        <label for="inputTamanho">Tamanho</label>
+                        <input type="number" id='inputTamanho' min="10" max="50" value="25">
+                    </div>
+                </div>
+            </div>
+            <input type="text" id="meuId" readonly class="none">
+        </div>
+        <div class="boxMusicaGartic">
+            <img src="imagens/mais.png" onclick="document.getElementById('player').volume+=0.1">
+
+            <div id="boxPlayMusic">
+                <img src="imagens/playAmarelo.png" onclick="musicaPlay()">
+                <figcaption>Faixa: "Higher Clarity",waveZzz<br>
+                    Música pela https://slip.stream<br>
+                    Download gratuito<br>
+                    Stream: https://get.slip.stream/ANbfxx<br>
+                    Ouça no Spotify: https://go-stream.link/tk-t-pain
+                </figcaption>
+            </div>
+
+            <img src="imagens/menos.png" onclick="document.getElementById('player').volume-=0.1">
+          
+            <audio id="player" controls="controls" loop class="none">
+                <source src="audios/Higher_Clarity_mp3/Higher Clarity.mp3" type="audio/mp3" />
+                seu navegador não suporta HTML5
+            </audio>
+        </div>
+    </header>
+
+    <main class="mainChat">
+        <div class="esquerda">
+            <div id="areaConectados"></div>
+        </div>
+
+        <div class="meio">
+            <div id="boxDraw"></div>
+            <hr>
+            <a class="areaHomeGartic" href="index.html">
+                <img src="imagens/home.png">
+            </a>
+        </div>
+
+        <div id="chat" class="direita">
+            <button class="tooltip" onclick="apagarMensagens()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" height="25" width="25">
+                    <path fill="#6361D9" d="M8.78842 5.03866C8.86656 4.96052 8.97254 4.91663 9.08305 4.91663H11.4164C11.5269 4.91663 11.6329 4.96052 11.711 5.03866C11.7892 5.11681 11.833 5.22279 11.833 5.33329V5.74939H8.66638V5.33329C8.66638 5.22279 8.71028 5.11681 8.78842 5.03866ZM7.16638 5.74939V5.33329C7.16638 4.82496 7.36832 4.33745 7.72776 3.978C8.08721 3.61856 8.57472 3.41663 9.08305 3.41663H11.4164C11.9247 3.41663 12.4122 3.61856 12.7717 3.978C13.1311 4.33745 13.333 4.82496 13.333 5.33329V5.74939H15.5C15.9142 5.74939 16.25 6.08518 16.25 6.49939C16.25 6.9136 15.9142 7.24939 15.5 7.24939H15.0105L14.2492 14.7095C14.2382 15.2023 14.0377 15.6726 13.6883 16.0219C13.3289 16.3814 12.8414 16.5833 12.333 16.5833H8.16638C7.65805 16.5833 7.17054 16.3814 6.81109 16.0219C6.46176 15.6726 6.2612 15.2023 6.25019 14.7095L5.48896 7.24939H5C4.58579 7.24939 4.25 6.9136 4.25 6.49939C4.25 6.08518 4.58579 5.74939 5 5.74939H6.16667H7.16638ZM7.91638 7.24996H12.583H13.5026L12.7536 14.5905C12.751 14.6158 12.7497 14.6412 12.7497 14.6666C12.7497 14.7771 12.7058 14.8831 12.6277 14.9613C12.5495 15.0394 12.4436 15.0833 12.333 15.0833H8.16638C8.05588 15.0833 7.94989 15.0394 7.87175 14.9613C7.79361 14.8831 7.74972 14.7771 7.74972 14.6666C7.74972 14.6412 7.74842 14.6158 7.74584 14.5905L6.99681 7.24996H7.91638Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                </svg>
+                <span class="tooltiptext">Apagar mensagens</span>
+            </button>
+
+            <div id="mensagens"></div>
+            
+            <div class="containerAreaEscrever">
+                <form action="" class="areaEscreve">
+                    <input type="text" id="mensagem" placeholder="Resposta">
+    
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="30.000000pt" height="30.000000pt" viewBox="0 0 30.000000 30.000000" preserveAspectRatio="xMidYMid meet" class="SendSVG">
+                            <g transform="translate(0.000000,30.000000) scale(0.100000,-0.100000)" fill="#615375" stroke="none">
+                                <path d="M44 256 c-3 -8 -4 -29 -2 -48 3 -31 5 -33 56 -42 28 -5 52 -13 52 -16 0 -3 -24 -11 -52 -16 -52 -9 -53 -9 -56 -48 -2 -21 1 -43 6 -48 10 -10 232 97 232 112 0 7 -211 120 -224 120 -4 0 -9 -6 -12 -14z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="avisoGartic">
+        <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/ZBca112uRFJNRCgnvU" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/FallGuysGame-fall-guys-game-ultimate-knockout-ZBca112uRFJNRCgnvU">via GIPHY</a></p>
+        <p>Oh não! parece que o seu dispositivo não tem um tamanho compatível com esse jogo.</p>
+        <p>Tente acessar com um dispositivo com uma tela maior que 800px.</p>
+    </div>
+    <footer>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var escolhido = false
+        //CHAT
+        const socket = io();
+        const nomeInput = document.getElementById('nome');
+        const mensagemInput = document.getElementById("mensagem");
+        const mensagens = document.getElementById("mensagens");
+
+        document.querySelector("form").addEventListener('submit', evento =>{
+            event.preventDefault()
+            const nome = nomeInput.value;
+            const mensagem = mensagemInput.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+            const id = document.getElementById("meuId").value
+
+            id.trim() && nome.trim() && mensagem.trim() && socket.emit('chat message', {nome,mensagem,id});
+            mensagemInput.value = '';
+
+            palavra = localStorage.getItem('palavra');
+            console.log('palavra: '+ palavra)
+        })
+
+        var contador = 0
+        socket.on('chat message', dados => {
+            const balaoMensagem = document.createElement('div');
+            balaoMensagem.classList.add("balaoMensagem")
+            balaoMensagem.textContent = `${dados.nome}: ${dados.mensagem}`;
+            mensagens.appendChild(balaoMensagem);
+
+
+            const idDaTentativa = dados.id
+            palavra = localStorage.getItem('palavra');
+            if(dados.mensagem == palavra.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")){ //a palavra esta indefinida para quem nao esta desenhando
+                const mensagemAcerto = document.createElement('div');
+                mensagemAcerto.classList.add("mensagemAcerto")
+                mensagemAcerto.innerHTML = `<p>${dados.nome} Acertou!</p>
+                                            <p>Resposta: ${palavra}</p>`;
+                //do id ${dados.id}
+                mensagens.appendChild(mensagemAcerto);
+
+                //console.log('input: '+ document.getElementById('meuId').value)
+                if(idDaTentativa == document.getElementById('meuId').value){
+                    socket.emit('start', {idDaTentativa}); ///////////
+                }
+                socket.emit('atualizaCard', {idDaTentativa});
+            }
+        })
+
+
+
+        //Onload / entrada
+        var meuId
+        function carregaUser(){
+            var nome = localStorage.getItem('username');
+            var personagem
+            var personagemEscolhido = localStorage.getItem('personagemEscolhido');
+            if(personagemEscolhido == "" || personagemEscolhido == undefined || personagemEscolhido == null){
+                personagemEscolhido = 0;
+            }
+            document.getElementById('nome').value = nome;
+            
+            var pontuacao = 0;
+            nome.trim() && socket.emit('entrou', {nome, pontuacao, personagemEscolhido});
+        }
+        
+
+        socket.on('entrou', infoUser => {
+            const card = document.createElement('div')
+            card.classList.add("cardConexao");
+            card.innerHTML=`<div class="card">${personagemEscolhido(infoUser.infoUser.personagemEscolhido)}
+                                <div class="cardNome">
+                                    <h3>${infoUser.infoUser.nome}</h3>
+                                    <p>Pontuação:</p>
+                                    <p class="pontuacao">${infoUser.infoUser.pontuacao}</p>
+                                    <input class="socketId none" value=${infoUser.id}>
+                                </div>
+                            </div>`;
+            document.getElementById('areaConectados').appendChild(card)
+
+            if(infoUser.aPalavra != undefined && infoUser.aPalavra != null){
+                localStorage.setItem('palavra', infoUser.aPalavra)
+            }
+
+            //console.log(infoUser.infoUser.nome);
+            //console.log(infoUser.conectados);
+
+            meuId = socket.id 
+            if(document. getElementById("meuId").value == ""){
+                document. getElementById("meuId").value = meuId
+                //carregar cards dos usuarios anteriores
+                for(var a = 0; a<infoUser.conectados.length-1; a++){
+                    const cardAnteriores = document.createElement('div')
+                    cardAnteriores.classList.add("cardConexao");
+                    cardAnteriores.innerHTML=`<div class="card">${personagemEscolhido(infoUser.conectados[a][3])}
+                                        <div class="cardNome">
+                                            <h3>${infoUser.conectados[a][1]}</h3>
+                                            <p>Pontuação:</p>
+                                            <p class="pontuacao">${infoUser.conectados[a][2]}</p>
+                                            <input class="socketId none" value=${infoUser.conectados[a][0]}>
+                                        </div>
+                                    </div>`;
+                    document.getElementById('areaConectados').appendChild(cardAnteriores)
+
+                    //console.log("escolhido: "+ escolhido)
+                    recarregarHeader(escolhido, palavra);
+                }
+            }
+        })
+
+
+        //GARTIC
+        
+       //desenho
+        boxDraw = document.getElementById('boxDraw')
+        var mouse = {};
+        boxDraw.addEventListener('mousemove', function(e){
+            mouse.x = e.clientX - boxDraw.offsetLeft;
+            mouse.y = e.clientY - boxDraw.offsetTop;
+        })
+        
+        var clique = false
+        var para = false
+
+        socket.on('desenharDesafio', posicao => {
+            var bolinha = document.createElement('div')
+            bolinha.style = `margin: ${posicao.y}px 0px 0px ${posicao.x}px;
+                                    width: ${posicao.tamanho}px; 
+                                    height:${posicao.tamanho}px;
+                                    border-radius: 100px;
+                                    border-style: none;
+                                    background-color: ${posicao.color};
+                                    position: absolute;`;
+            /*var outraBolinha = document.createElement('img')
+            outraBolinha.src = "imagens/bolinhaPreta.png"
+            outraBolinha.style = `margin: ${posicao.y}px 0px 0px ${posicao.x}px;
+                                    width:10px; 
+                                    position: absolute`*/
+                    //`<img src="http://127.0.0.1:5500/public/gartic/imagens/bolinhaPreta.png" style= "width:10px; margin: ${mouse.y}px 0px 0px ${mouse.x}px;">`
+                    boxDraw.appendChild(bolinha)
+                    //return;
+        })
+
+        let drag = false;
+        boxDraw.addEventListener('mousedown', function(){
+            
+            drag = true;
+            //console.log(escolhido)
+            if(escolhido && drag){
+                boxDraw.addEventListener('mousemove', function(){
+                    if(drag && escolhido){
+                        var tamanho = document.getElementById('inputTamanho').value;
+                        if(tamanho>50){tamanho =50; document.getElementById('inputTamanho').value=50}
+                        if(tamanho<10){tamanho=10; document.getElementById('inputTamanho').value=10}
+                        var color = document.getElementById('inputColor').value;
+                        x = mouse.x
+                        y = mouse.y
+                        socket.emit('desenharDesafio', {x, y, color, tamanho});
+                    }
+                })
+            }
+        })
+        boxDraw.addEventListener('mouseup', () => {
+            drag = false
+        });
+
+        //desenho com click
+        /*boxDraw.addEventListener('click', function(){
+            if(escolhido){
+                if(clique){
+                    clique=false
+                }else{
+                    clique = true
+                }
+                para = false
+    
+                if(clique && !para){
+                    boxDraw.addEventListener('mousemove', function(){
+                        if(clique && !para){
+    
+                        x = mouse.x
+                        y = mouse.y
+                        socket.emit('desenharDesafio', {x, y});
+                        }
+                    })
+                }else{
+                    if(!clique){
+                        para = true
+                    }
+                }
+            }
+        })*/
+
+
+        var palavra;
+        socket.on('start', dados => {
+            localStorage.setItem('palavra', dados.aPalavra)
+            palavra = localStorage.getItem('palavra');
+            desenhista = dados.idDoDesenhista
+            console.log("A palavra da vez é: "+ palavra);
+            console.log("O desenhista da vez é: "+ desenhista);
+            
+            if(dados.primeiraPartida){
+                setTimeout(() => {
+                    console.log("Meu id é: "+ document.getElementById('meuId').value);
+                    if(document.getElementById('meuId').value == dados.idDoDesenhista){
+                        escolhido = true; 
+                    }else{
+                        escolhido = false
+                    }
+                    console.log("escolhido: "+ escolhido)
+                    recarregarHeader(escolhido, palavra);
+                }, 800);
+            }else{
+                console.log("Meu id é: "+ document.getElementById('meuId').value);
+                if(document.getElementById('meuId').value == dados.idDoDesenhista){
+                    escolhido = true; 
+                }else{
+                    escolhido = false
+                }
+                //console.log("escolhido: "+ escolhido)
+                recarregarHeader(escolhido, palavra);
+            }
+        })
+
+
+        socket.on('atualizaCard', oId => {
+            var inputIdCards = document.getElementsByClassName('socketId');
+            var pontuacaoCards = document.getElementsByClassName('pontuacao');
+
+            //console.log('oId: '+ oId.idDaTentativa);
+            //console.log(inputIdCards[1].value);
+
+            for(var x=0; x<inputIdCards.length; x++){
+                if(inputIdCards[x].value == oId.idDaTentativa){
+                    pontuacaoCards[x].innerHTML= `<p>${oId.pontuacao}<p>`
+                }
+            }
+        })
+
+        socket.on('apagaCard', idDesc => {
+            console.log('aaaaaaaaaaaaaaapaga')
+            var inputIdCards = document.getElementsByClassName('socketId');
+            var cards = document.getElementsByClassName('card');
+
+            for(var x=0; x<inputIdCards.length; x++){
+                if(inputIdCards[x].value == idDesc){
+                    cards[x].parentNode.removeChild(cards[x]);
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

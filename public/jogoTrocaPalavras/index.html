@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imagens/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Jogo</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="areaHome">
+            <img src="imagens/home.png" alt="Botão para a página inicial">
+        </a>
+        <h1>Troca de palavras</h1>
+    </header>
+    <main>
+        <img class="imgConstrutora" src="imagens/construtor1.png">
+        <div class="box">
+            <p>Escreva uma palavra para descobrir como ficaria o nome do filme, seja criativo!</p>
+            <input type="text" id="palavra">
+            <div class="btns">
+                <button id="jogar" onclick="jogar()">Jogar</button>
+                <button id="jogar" onclick="listar()">Reiniciar</button>
+            </div>
+
+            <div id="mostrar"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/JessicaMoreiraS">Jéssica Moreira</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+header{
+    background-color: #f9bf76;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #615375;
+}
+header .areaHome{
+    background-color: #8eb2c5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+header .areaHome img{width: 100%;}
+header .areaHome:hover{background-color: #e5625c;}
+main{
+    background-image: url('../imagens/fundo12.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #615375;
+    min-height: 80vh;
+}
+.box{
+    background-color: #f9bf76;
+    border: 2px solid #e5625c;
+    min-width: 250px;
+    width: 30%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    border-radius: 20px;
+}
+.box input{
+    font-family: 'Mochiy Pop One', sans-serif;
+    border: 2px solid #e5625c;
+    border-radius: 10px;
+    color: #8eb2c5;
+    font-size: 1.2em;
+    text-align: center;
+}
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box button{
+    width: 25%;
+    margin: 0 1%;
+    padding: 2%;
+    background-color: #e5625c;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.2em;
+    border: 0;
+}
+.box button:hover{
+    background-color: #fff;
+    color: #e5625c;
+    box-shadow: 10px 10px 40px #e5625c;
+}
+.box #mostrar{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.imgConstrutora{
+    width: 300px;
+}
+
+footer{
+    background-color: #f9bf76;
+    color: #615375;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+}
+footer a{
+    text-decoration: none;
+    color: #8eb2c5;
+    -webkit-text-stroke: 0.2px #615375;
+    text-stroke: 0.2px #615375;
+}
+
+@media only screen and (max-width:460px){
+    header{
+        height: 25vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    header .areaHome{
+        position: relative;
+    }
+}
+
+/*palheta principal:
+
+vermelho #d1313d
+pessego #e5625c
+amarelo #f9bf76
+azul #8eb2c5
+roxo #615375
+*/

@@ -1,0 +1,960 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Modak&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Imprima', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.none{
+    display: none;
+}
+#boxDraw{
+    width: 800px;
+    height: 600px;
+    border: 2px solid #000;
+    background-color: #fff;
+    /*retira selecao de texto*/
+    -youbkit-touch-callout: none; /* iOS Safari */
+    -youbkit-user-select: none;   /* Chrome 6.0+, Safari 3.1+, Edge e Opera 15+ */
+    -moz-user-select: none;    /* Raposa de fogo */
+    -ms-user-select: none;        /* IE 10+ e Edge */
+    user-select: none;            /* Versão sem prefixo, atualmente suportado pelo Chrome e Opera */
+}
+.meio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.meio .areaHomeGartic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #615375;
+}
+.meio .areaHomeGartic img{width: 100%;}
+.meio .areaHomeGartic:hover{background-color: #e5625c;}
+
+.card{
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f9bf76;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card img{
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.card p, .card h3{
+    text-align: center;
+}
+
+/*Header*/
+.headerChat{
+    height: 10vh;
+    max-height: 10vh;
+}
+.headerChat, .direita, .containerFerramentas{
+    display:flex;
+    flex-direction: row;
+}
+.headerChat{
+    background-color: #615375;
+    color: #fff;
+}
+.esquerdaHeader{
+    background-color: #f9bf76;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+}
+.esquerdaHeader input{
+    font-size: 1em;
+    text-align: center;
+}
+.esquerda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+.direita{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#EscolhidoFerramentas .suaVez{
+    background-color: #e5625c;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#EscolhidoFerramentas .suaVez input{
+    text-align: center;
+    font-size: 1.2em;
+}
+.ferramentas{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    background-color: #e5625c;
+}
+.containerFerramentas{
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.containerFerramentas div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ferramentas #borracha{
+    width: 40px;
+}
+.boxMusicaGartic{
+    background-color: #8eb2c5;
+    width: 20s0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.boxMusicaGartic img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.boxMusicaGartic #boxPlayMusic{
+    width: 90px;
+    height: 90px;
+}
+.boxMusicaGartic #boxPlayMusic img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.boxMusicaGartic #boxPlayMusic figcaption {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: #EEE;
+    padding: 5px;
+    margin-top: -15px;
+    margin-left: -100px;
+    display: none;
+}
+
+.boxMusicaGartic #boxPlayMusic img:hover ~ figcaption {
+    opacity: 1;
+    display: block;
+}
+
+/*Imputs do header*/
+.inputInvisivel{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    background-color: transparent;
+    color: #fff;
+    cursor: auto;
+}
+.inputInvisivel:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+#inputColor{
+    height: 35px;
+      border: none;
+      padding: 0;
+      background-color: #fff;
+      cursor: pointer;
+}
+#inputColor:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+#inputTamanho{
+    font-size: 20px;
+}
+
+#inputTamanho::-webkit-inner-spin-button { 
+    width: 30px;
+    height: 50px;
+    margin: 17px;
+    padding: 5px;
+    transform: rotate(90deg);
+    filter: sepia(100%) hue-rotate(90deg);
+    cursor: pointer;
+}
+
+
+/*MAIN GARTIC*/
+.mainChat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*gap:5%;*/
+    background-color: aliceblue;
+    /*background-image: url('../imagens/fundo3.jpg');
+    background-repeat: repeat;
+    background-size: 100px;*/
+}
+.mainChat .direita, .mainChat .esquerda{
+    height: 90vh;
+    width: 25%;
+    max-height: 90vh;
+    min-width: 170px;
+}
+
+.mainChat .direita .areaEscreve{
+    background-color: #8eb2c5;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.mainChat .direita{
+    background-color: #f9bf76;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.tooltip{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 0px solid transparent;
+    background-color: rgba(100,77,237,0.08);
+    border-radius: 1.25em;
+    transition: all 0.2s linear;
+}
+.tooltip:hover {
+    box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
+     8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+     17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+     36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+     99px 72px 143px rgba(0, 0, 0, 0.08);
+}   
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 6em;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 110%;
+}   
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
+}   
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.balaoMensagem{
+    max-width: 300px;
+    background-color: #8eb2c5;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.3em;
+    word-break: break-word;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+.mensagemAcerto{
+    max-width: 300px;
+    background-color: #e5625c;
+    color: #FFF;
+    -webkit-text-stroke: 0.2px #615375;
+    text-stroke: 0.2px #615375;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.3em;
+    word-break: break-word;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+.mainChat .direita .containerAreaEscrever{
+    background-color: #615375;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 8vh;
+    min-height: 50px;
+}
+.mainChat .direita #mensagens{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow:auto; 
+    width: 100%;
+    align-self: flex-start;
+    justify-self: flex-start;
+    flex-grow: 2;
+}
+.mainChat .direita #mensagens div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.mainChat .direita .areaEscreve #mensagem{
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    font-size: 1.5em;
+    padding: 1%;
+    width: 200px;
+}
+.mainChat .direita .areaEscreve #mensagem:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+.mainChat .direita .areaEscreve button{
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    width: 50px;
+}
+
+
+.mainChat .esquerda{
+    background-color: #8eb2c5;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto; 
+}
+#areaConectados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#areaConectados div{
+    margin: 5px;
+}
+.avisoGartic{
+    display: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90%;
+    background-color: #8eb2c5;
+    color: #000;
+    border: 3px dashed #e5625c;
+    border-radius: 10px;
+    padding: 3%;
+    font-size: 1.3em;
+}
+.avisoGartic p{
+    text-align: center;
+}
+@media only screen and (max-width: 1300px){
+    .mainChat .direita .areaEscreve #mensagem{
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .mainChat{
+        flex-direction: column;
+    }
+    .mainChat .meio{
+        order: 1;
+    }
+    #boxDraw{
+        margin: 0 auto;
+    }
+    .mainChat .esquerda{
+        width: 100%;
+        height: 210px;
+        order: 2;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    #areaConectados{
+        flex-wrap: nowrap;
+        
+    }
+    .mainChat .direita{
+        width: 100%;
+        height: 400px;
+        order:3;
+    }
+    .mainChat .direita .areaEscreve #mensagem{
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .avisoGartic{
+        display: block;
+    }
+    .esquerda, .meio, .direita{
+        display: none;
+    }
+}
+
+
+/*INDEX*/
+.headerDegrade{
+    width: 100%;
+    padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, blue, orangered, yellow);
+    background-size: 500% 100%;
+    animation: degradeAnimado 5s infinite alternate;
+    color: #fff;
+    font-family: 'Imprima', sans-serif;
+    font-size: 18px;
+}
+
+.headerDegrade .h1{
+    font-family: 'Modak', cursive;
+    font-size: 6em;
+    color: #fff;
+    -webkit-text-stroke: 1px #615375;
+    text-stroke: 1px #615375;
+}
+
+.footerDegrade{
+    width: 100%;
+    padding: 25px 0;
+   /* background-image: linear-gradient(to left, blue, orangered, yellow);
+    background-size: 500% 100%;
+    animation: degradeAnimado 5s infinite alternate;*/
+    color: #fff;
+    -webkit-text-stroke: 0.1px #615375;
+    text-stroke: 0.1px #615375;
+    font-family: 'Imprima', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F6921E;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+@keyframes degradeAnimado{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+.footerDegrade p, .footerDegrade a{
+    color: #fff;
+    font-weight: 100;
+    -webkit-text-stroke: 0.2px #615375;
+    text-stroke: 0.2px #615375;
+}
+.footerDegrade .licenca{
+    width: 250px;
+    font-size: 16px;
+    margin: 5px;
+}
+.footerDegrade a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+}
+
+
+.areaMusicaIndex{
+    width: 100px;
+}
+#areaMusica img{
+    width: 100%;
+    cursor: pointer;
+}
+.mainIndex #boxGames{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Imprima', sans-serif;
+}
+.mainIndex .aCardIndex{
+    color: #000;
+    text-decoration: none;
+    background-color: #e5625c;
+    width: 26%;
+    min-width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 12px 4px #8eb2c5;
+    transition: 0.5s;
+}
+.mainIndex .aCardIndex:hover{
+    box-shadow: 20px 20px 50px 15px #8eb2c5;
+}
+.mainIndex .aCardIndex .cardImgIndex{
+    width: 90%;
+    padding: 5%;
+}
+.mainIndex .aCardIndex .cardImgIndex img{
+    border-radius: 20px;
+    width: 100%;
+}
+.mainIndex .aCardIndex h3{
+    text-align: center;
+    font-size: 25px;
+    padding: 2%;
+    color: #fff;
+    text-shadow: 
+               -1px -1px 0px #615375, 
+               -1px 1px 0px #615375,                    
+                1px -1px 0px #615375,                  
+                1px 0px 0px #615375;
+}
+.mainIndex .aCardIndex p{
+    text-align: center;
+    font-size: 20px;
+    padding: 3% 5%;
+    color: #fff;
+    text-shadow: 
+               -1px -1px 0px #615375, 
+               -1px 1px 0px #615375,                    
+                1px -1px 0px #615375,                  
+                1px 0px 0px #615375;
+}
+.principalIndex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Imprima', sans-serif;
+    letter-spacing: 1.5px;
+}
+.principalIndex a{
+    text-decoration: none;
+}
+.principalIndex .tema{
+    text-align: center;
+    width: 97%;
+    border-bottom: 3px dashed #8eb2c5;
+    padding: 1.5%;
+    font-size: 2em;
+    color: #615375;
+    background-color: #F6921E;
+}
+#containerboxPersonagem{
+    background-color: #8eb2c5;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Imprima', sans-serif;
+}
+#containerboxPersonagem h4{
+    padding: 1%;
+    color: #615375;
+    text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
+}
+.mainIndex #boxPersonagem{
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.mainIndex #boxPersonagem div{
+    max-width: 300px;
+}
+.mainIndex #boxPersonagem div img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.minhaPropaganda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.minhaPropaganda a{
+    border-radius: 35px;
+}
+.minhaPropaganda button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 6px 5px 7px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+    border-color: #ffe2e2;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: 900;
+    color: rgb(134, 124, 124);
+    font-family: monospace;
+    transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
+    border-color 400ms ease-in-out,
+    background-color 400ms ease-in-out;
+    word-spacing: -2px;
+    margin-top: 2%;
+}  
+@keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+    50% {
+      border-color: #ffd8d8;
+    }
+    90% {
+      border-color: #fce4e4;
+    }
+}
+.minhaPropaganda button:hover {
+    background-color: #eee;
+    transform: scale(105%);
+    animation: movingBorders 3s infinite;
+}
+.minhaPropaganda button svg {
+    fill: #F6921E;
+    margin-left: 13px;
+}
+@keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.15);
+    }
+    30% {
+      transform: scale(1);
+    }
+    45% {
+      transform: scale(1.15);
+    }
+    60% {
+      transform: scale(1);
+    }
+}
+.minhaPropaganda button:hover svg {
+    transform: scale(105%);
+    border-color: #ffd8d8;
+    animation: beatingHeart 1.2s infinite;
+}
+.btnChat{
+    width: 100px;
+}
+.btnChat a, .btnChat a img{
+    width: 100%;
+}
+@media only screen and (max-width: 600px){
+    .headerDegrade .h1{
+        font-size: 3.5em;
+    }
+}
+
+
+/*SELECAO DE PERSONAGENS*/
+.headerSelecaoPersonagem{
+    height: 300px;
+}
+.headerSelecaoPersonagem::before{
+    width: 100%;
+    height: 300px;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-image: url('../imagens/queda1.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+.headerSelecaoPersonagem div{
+    z-index: 2;
+    position: absolute;
+    background-color: #0C3EA1;
+    border-radius: 10px;
+    padding: 1%;
+    font-size: 4em;
+    font-family: 'Modak', cursive;
+    color: #fff;
+    -webkit-text-stroke: 1px #615375;
+    text-stroke: 1px #615375;
+    width: 60%;
+    left: 20%;
+    top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.areaHomeSelecao{
+    background-color: #eee;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+.areaHomeSelecao:hover{background-color: #e5625c;}
+.areaHomeSelecao img{ width: 100%;}
+#cardsPersonagens{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #615375;
+    background-image: url("../imagens/fundo2.jpg");
+    background-repeat: repeat;
+    background-size: 200px;
+}
+.cardPersonagem{
+    height: 350px;
+    width: 300px;
+    background-color: #8eb2c5;
+    border-radius: 20px;
+    border: 2px solid #615375;
+    transition: 0.5s;
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cardPersonagem:hover{
+    box-shadow: 10px 10px 10px #e5625c;
+    background-color: #fff;
+}
+.cardPersonagem img{
+    max-width: 85%;
+    max-height: 80%;
+}
+.cardPersonagem p{
+    text-align: center;
+    font-size: 2em;
+}
+.footerSelecaoPersonagem{
+    background-color: #e5625c;
+    color: #fff;
+    -webkit-text-stroke: 0.1px #615375;
+    text-stroke: 0.1px #615375;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.footerSelecaoPersonagem a{
+    text-decoration: none;
+    color: #fff;
+    -webkit-text-stroke: 0.1px #615375;
+    text-stroke: 0.1px #615375;
+}
+
+
+
+
+@media only screen and (max-width: 700px){
+    .headerSelecaoPersonagem div{
+        font-size: 2em;
+    }
+}
+
+/*LOGINGARTIC*/
+
+.headerHome{
+    position: absolute;
+    top:15px;
+    left: 15px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: rgb(151, 95, 255);
+}
+.headerHome img{
+    width: 100%;
+}
+.headerHome:hover{
+    background-color: #e5625c;
+}
+.bodyLoginGartic{
+    background-image: url('../imagens/jogos/pintor3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 99vh;
+}
+.bodyLoginGartic .mainLoginGartic .boxPrincipal{
+    background-color: #EEE;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    width: 50%;
+    min-width: 310px;
+    margin: 0 auto;
+    margin-top: 1vh;
+    box-shadow: 10px 10px 100px #615375;
+}
+.bodyLoginGartic .mainLoginGartic .boxPrincipal input, .bodyLoginGartic .mainLoginGartic .boxPrincipal select{
+    width: 270px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-size: 1.2em;
+    padding: 2%;
+    margin: 2%;
+}
+.bodyLoginGartic .mainLoginGartic .boxPrincipal select{
+    width: 300px;
+    margin-bottom: 4%;
+}
+.bodyLoginGartic .mainLoginGartic .boxPrincipal button{
+    position: relative;
+    width: 150px;
+    height: 55px;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(151, 95, 255);
+    color: white;
+    box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(124, 54, 255) inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.bodyLoginGartic .mainLoginGartic .boxPrincipal button::before{
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+}
+.bodyLoginGartic .mainLoginGartic .boxPrincipal button::after{
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+}
+.bodyLoginGartic .mainLoginGartic .boxPrincipal button:hover{
+    animation: jello-horizontal 0.9s both;
+}
+@keyframes jello-horizontal {
+    0% {transform: scale3d(1, 1, 1);}
+    30% {transform: scale3d(1.25, 0.75, 1);}
+    40% {transform: scale3d(0.75, 1.25, 1);}
+    50% {transform: scale3d(1.15, 0.85, 1);}
+    65% {transform: scale3d(0.95, 1.05, 1);}
+    75% {transform: scale3d(1.05, 0.95, 1);} 
+    100% {transform: scale3d(1, 1, 1);}
+}
+@media only screen and (max-width: 520px){
+    .headerLoginGartic{
+        height: 100px;
+        display: flex;
+    }
+    .headerHome{
+        width: 80px;
+        height: 80px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+    .headerHome img{
+        width: 80px;
+    }
+}
+
+
+/*
+audio{
+    background-color: aqua;
+    color: #e5625c;
+}
+
+/*Play
+audio::-webkit-media-controls-timeline { display:inline-flex;}
+audio::-webkit-media-controls-panel {background-color: #e5625c;}
+audio::-webkit-media-controls-play-button {
+    background: url(../imagens/playAmarelo.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+/*Mudo
+audio::-webkit-media-controls-mute-button {
+    background: url(../imagens/fundo1.jpg) 50% 50% no-repeat;
+    background-size: contain;
+}
+/*Tempo
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: blue
+}*/
+/*
+
+https://gist.github.com/Realetive/43c970b72a70badbd2a3
+
+palheta:
+
+vermelho #d1313d
+pessego #e5625c
+amarelo #f9bf76
+azul #8eb2c5
+roxo #615375
+*/

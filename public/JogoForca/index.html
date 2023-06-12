@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/imagens/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <title>Jogo da forca</title>
+</head>
+<body onload="sorteia()">
+    <header>
+        <a href="../index.html" class="areaHome"><img src="imagens/home.png" alt=""></a>
+        <h1>Jogo Da Forca</h1>
+        <div class="containerRosinha">
+            <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/MmPg5XMqKNc4FSVD0M" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/FallGuysGame-transparent-MmPg5XMqKNc4FSVD0M">via GIPHY</a></p>
+        </div>
+    </header>
+    <main>
+        <div id="forca" class="anima">
+            <img src="imagens/forca1.png" id="imagem">
+        </div>
+        <div id="tabelaDiv">
+            <table class="tabelaPlacar" align="center">
+                <tr>
+                    <td id="tabAcerto">
+                        <div id="acerto">Acertos: 0</div>
+                        <br>
+                        <div id="palCerta">
+                            Palavras certas: 0
+                            <br>
+                            Palavras Erradas: 0
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <hr>
+
+            <table border="0" class="tabelaResposta" align="center">
+                <tr>
+                    <td>
+                        <br>
+                        <div class="areaTema">
+                            <div id="tema">TEMA: fruta</div>
+                        </div>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="tenativa">
+                            <form action="" id="tenta"></form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <hr>
+
+
+            <table border="0" class="tabelaTeclado" align="center">
+                <tr>
+                    <td>
+                        <div id="letras">
+                            <form action="" id="tecl1"></form>
+                            <br>
+                            <form action="" id="tecl2"></form>
+                            <br>
+                            <form action="" id="tecl3"></form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por: <a href="https://github.com/JessicaMoreiraS">Jéssica Moreira</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/imagens/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body class="bodyLoginGartic">
+  <header class="headerLoginGartic">
+    <a class="headerHome" href="index.html"><img src="imagens/home.png"></a>
+  </header>
+  <main class="mainLoginGartic">
+    <div class="boxPrincipal">
+      <p>Prencha seu nome e escolha uma sala para mostrar suas habilidades de artista!</p>
+      <input type="text" placeholder="user name" id="nome" name="nome">
+  
+      <select id="temaSala">
+        <option value="nenhum">Selecione uma sala</option>
+        <option value="programacao">Programadores</option>
+      </select>
+      <button onclick="acessar()">
+        Acessar
+      </button>
+    </div>
+
+
+
+    <!--inicio Libas -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <!--fim Libas -->
+  </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

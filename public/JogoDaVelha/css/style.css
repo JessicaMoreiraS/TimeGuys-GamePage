@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Modak&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Imprima', sans-serif;
+}
+header{
+    height: 20vh;
+    background-color: #57A3C4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .headerCopo{
+    width: 80px;
+}
+header .headerBatata{
+    width: 90px;
+}
+header .areaHome{
+    width: 100px;
+    border-radius: 50px;
+    background-color: #615375;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+header .areaHome:hover{
+    background-color: #e5625c;
+}
+header .areaHome img{
+    width: 100%;
+}
+header h1{
+    color: #fff;
+    -webkit-text-stroke: 1px #615375;
+    text-stroke: 1px #615375;
+    font-size: 3em;
+    font-family: 'Modak', cursive;
+}
+body{
+    background-image: url('../imagens/fundo2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-wrap: wrap;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#jogo{
+    width: 603px;
+    height: 603px;
+    border: solid 3px;
+    display: inline-block;
+    margin: 5%;
+    background-color: white;
+}
+#resultado{
+    margin-left: 30px;
+    float: left;
+    color: black;
+    padding: 2% 5% 3% 2.5%;
+    border-radius: 10px;
+    background-image: url('../imagens/fundo3.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 410px;
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#resposta{
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    color: darkblue;
+}
+.linha{
+    height: 200px;
+    border-bottom: solid 1px;
+}
+.casa{
+    width: 200px;
+    height: 100%;
+    border-right: solid 1px;
+    float: left;
+}
+.xis, .velha, .bola{
+    font-family: 'Courier New', "monospace", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+input[type=button], input[type=submit], input[type=reset]{
+    background-color: #615375;
+    padding: 14px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #8eb2c5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+    font-weight: 600;
+}
+input[type=button]:hover{
+    transition: .4s;
+    border: 2px dashed #8eb2c5;
+    background-color: #fff;
+    color: #615375;
+}
+input[type=button]:active{
+    background-color: #87dbd0;
+}
+
+img{
+    width: 100%;
+}
+
+footer{
+    height: 10vh;
+    background-color: #57A3C4;
+    color: #fff;
+    -webkit-text-stroke: 0.1px #615375;
+    text-stroke: 0.1px #615375;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 2%;
+    font-size: 18px;
+}
+.aviso{
+    background-color: #fff;
+    color: black;
+    font-size: 1em;
+    border-radius: 20px;
+    border: 2px dashed #e5625c;
+    box-shadow: 10px 10px 10px #87dbd0;
+    height: 50%;
+    width: 70%;
+    padding: 5%;
+    margin: 5% 0 ;
+    display: none;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+    -webkit-text-stroke: 0.1px #615375;
+    text-stroke: 0.1px #615375;
+}
+
+@media only screen and (max-width: 1200px){
+    main{
+        flex-direction: column-reverse;
+    }
+    #resultado{
+        width: 280px;
+    }
+    #resposta{
+        padding-left: 15%;
+    }
+    header, footer{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 430px){
+    header .areaHome{
+        position: relative;
+        margin: 8px;
+    }
+}
+@media only screen and (max-width: 680px){
+    header .headerCopo, header .headerBatata{
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px){ 
+    header{
+        flex-direction: column;
+        height: 25vh;
+    }
+    header .areaHome{
+        position: relative;
+        width: 55px;
+        height: 55px;
+    }
+    main{
+        min-height: 80vh;
+    }
+    .aviso{
+        display: block;
+    }
+    #resultado, #jogo{
+        display: none;
+    }
+}
+/*palheta principal:
+
+vermelho #d1313d
+pessego #e5625c
+amarelo #f9bf76
+azul #8eb2c5
+roxo #615375
+*/

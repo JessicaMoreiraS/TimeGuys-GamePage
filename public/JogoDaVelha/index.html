@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="areaHome"><img src="imagens/home.png" alt=""></a>
+        <img src="imagens/copo2.png" alt="Personagem Sorvete" class="headerCopo">
+        <h1>Jogo Da Velha</h1>
+        <img src="imagens/batataFrita2.png" alt="Personagem batata frita" class="headerBatata">
+    </header>
+    <main onload="recomeca()">
+        
+            <div id="jogo">
+                <div class="linha">
+                    <div class="casa" id="casa0" onclick="verifica(0)">
+                        <img src="" id="img0">
+                    </div>
+                    <div class="casa" id="casa1" onclick="verifica(1)">
+                        <img src="" id="img1">
+                    </div>
+                    <div class="casa" id="casa2" onclick="verifica(2)">
+                        <img src="" id="img2">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="casa" id="casa3" onclick="verifica(3)">
+                        <img src="" id="img3">
+                    </div>
+                    <div class="casa" id="casa4" onclick="verifica(4)">
+                        <img src="" id="img4">
+                    </div>
+                    <div class="casa" id="casa5" onclick="verifica(5)">
+                        <img src="" id="img5">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="casa" id="casa6" onclick="verifica(6)">
+                        <img src="" id="img6">
+                    </div>
+                    <div class="casa" id="casa7" onclick="verifica(7)">
+                        <img src="" id="img7">
+                    </div>
+                    <div class="casa" id="casa8" onclick="verifica(8)">
+                        <img src="" id="img8">
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultado">
+                <p id="resposta">Resultado:</p>
+                <br>
+                <p id="xis" class="xis">Pontos Batata Frita: 0</p>
+                <p id="bola" class="bola">Pontos Sorvete: 0</p>
+                <p id="velha" class="velha">Velha: 0</p>
+                <form>
+                    <input type="button" id="btnNovo" value="Novo Jogo" onclick="recomeca()">
+                </form>
+            </div>
+        </div>
+       <div class="aviso">
+        <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/6B3RoC93XSu87EhSfy" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/FallGuysGame-fall-guys-mediatonic-game-6B3RoC93XSu87EhSfy">via GIPHY</a></p>
+           <p>Ops, seu aparelho não possui dimenssões adequadas para o jogo</p> 
+       </div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: <a href="https://github.com/JessicaMoreiraS">Jéssica Moreira</a></p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

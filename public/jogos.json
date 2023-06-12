@@ -1,0 +1,34 @@
+{
+    "jogos":[
+        {
+            "nome":"Gartic",
+            "imagem":"pintor.jpg",
+            "descricao":"Compartilhe com seus amigos, tente adivinhar o desenho de outros e mostre o artista que você é!",
+            "link":"loginGartic.html"
+        },
+        {
+            "nome":"Forca",
+            "imagem":"forca.png",
+            "descricao":"Consegue descobrir a palavra? Tente salvar o Jellybean da forca!",
+            "link":"jogoForca/index.html"
+        },
+        {
+            "nome":"Troca de palavras",
+            "imagem":"fundo8.jpg",
+            "descricao":"Mostre sua criatividade para construir novos nomes de filmes",
+            "link":"jogoTrocaPalavras/index.html"
+        },
+        {
+            "nome":"Jogo da velha",
+            "imagem":"oJogoDaVelha.jpg",
+            "descricao":"Vamos ver quem consegue vencer esse jogo da velha? Chame alguém para jogar com você!",
+            "link":"jogoDaVelha/index.html"
+        },
+        {
+            "nome":"Seleção de personagem",
+            "imagem":"selecaoPersonagens.jpg",
+            "descricao":"Selecione o Jellybean que melhor te representa",
+            "link":"selecaoPersonagem.html"
+        }
+    ]
+}
