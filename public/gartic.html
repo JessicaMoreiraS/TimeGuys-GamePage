@@ -197,6 +197,9 @@
                             </div>`;
             document.getElementById('areaConectados').appendChild(card)
 
+            if(infoUser.palavraGlobal != undefined && infoUser.palavraGlobal != null){
+                localStorage.setItem('palavra', infoUser.palavraGlobal)
+            }
             if(infoUser.aPalavra != undefined && infoUser.aPalavra != null){
                 localStorage.setItem('palavra', infoUser.aPalavra)
             }

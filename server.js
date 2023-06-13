@@ -14,6 +14,7 @@ var palavras = ['computador', 'servidor', 'nuvem', 'dado', 'teclado', 'headset',
 var palavra;
 var i = 0;
 var jogadorDaVez;
+var palavraGlobal;
 
 
 
@@ -35,13 +36,16 @@ io.on('connection', (socket) => {
         console.log(`Conectado: ${socket.id} - ${infoUser.nome}`);
         conectados.push([socket.id, infoUser.nome, infoUser.pontuacao, infoUser.personagemEscolhido]);
         
-        //var usersAnteriores = conectados
-        io.emit('entrou', {infoUser, id, conectados});
+        
 
         if(conectados.length == 1){
+            //var usersAnteriores = conectados
+            io.emit('entrou', {infoUser, id, conectados});
+            
             var numero = Math.floor(Math.random() * (palavras.length-1) + 1);
             var aPalavra = palavras[numero];
             palavra = aPalavra;
+            palavraGlobal = aPalavra;
 
             var idDoDesenhista = conectados[0][0];
             var primeiraPartida = true
@@ -51,6 +55,8 @@ io.on('connection', (socket) => {
             io.emit('start', {aPalavra, idDoDesenhista, primeiraPartida});
         }else{
             infoUser.aPalvra = palavra;
+            //var usersAnteriores = conectados
+            io.emit('entrou', {infoUser, id, conectados, palavraGlobal});
         }
     })
 
@@ -63,6 +69,8 @@ io.on('connection', (socket) => {
             i=conectados.length-1; //0 --testar
         }
         dados.aPalavra = palavras[numero];
+        palavraGlobal = dados.aPalavra;
+                    ///////////
         dados.primeiraPartida = false
         dados.idDoDesenhista = conectados[i][0];
         console.log('dados.idDoDesenhista: '+ dados.idDoDesenhista+ ' e i: '+i);
@@ -116,6 +124,8 @@ io.on('connection', (socket) => {
                     var numero = Math.floor(Math.random() * (palavras.length-1) + 1);
                     dados={};
                     dados.aPalavra = palavras[numero];
+                    palavraGlobal = dados.aPalavra;
+                    ///////////
                     dados.primeiraPartida = false;
                     if(conectados[i][0] != undefined && conectados[i][0] != "" && conectados[i][0] != null){
                         dados.idDoDesenhista = conectados[i][0];

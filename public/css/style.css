@@ -41,6 +41,7 @@ html {
     border-radius: 10px;
     background-color: #f9bf76;
     width: 150px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +93,7 @@ html {
     justify-content: center;
 }
 #EscolhidoFerramentas .suaVez{
-    background-color: #e5625c;
+    background-color: #f03026;
     height: 100%;
     display: flex;
     align-items: center;
@@ -514,7 +515,7 @@ html {
     background-color: #e5625c;
     width: 26%;
     min-width: 300px;
-    height: 400px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -691,6 +692,13 @@ html {
 @media only screen and (max-width: 600px){
     .headerDegrade .h1{
         font-size: 3.5em;
+    }
+    .mainIndex .aCardIndex{height: 400px;}
+    .footerDegrade{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 }
 
