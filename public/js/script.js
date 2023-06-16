@@ -80,11 +80,11 @@ function carregaCardsJogos(){
     .then(aquivos => {
         var blanck = "";
         for(var x=0; x<aquivos.jogos.length; x++){
-            if(aquivos.jogos[x].nome == "Forca" || aquivos.jogos[x].nome == "Troca de palavras" || aquivos.jogos[x].nome == "Jogo da velha"){
+           /* if(aquivos.jogos[x].nome == "Forca" || aquivos.jogos[x].nome == "Troca de palavras" || aquivos.jogos[x].nome == "Jogo da velha"){
                 blanck='target="_blank"';
             }else{
                 blanck="";
-            }
+            }*/
             document.getElementById("boxGames").innerHTML += `<a class="aCardIndex" ${blanck} href="${aquivos.jogos[x].link}">
                                                                 <div class="cardImgIndex">
                                                                     <img src="../imagens/jogos/${aquivos.jogos[x].imagem}">
