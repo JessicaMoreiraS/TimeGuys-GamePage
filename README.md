@@ -61,6 +61,14 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
 </div>
 
 <div align="center">
+  <h3>Jogo Da Velha</h3>
+  <div align="left">
+    <p>Jogue acompanhado, o objetivo é conseguir alinhar seu personagem em três quadrados antes de seu oponente</p>
+  </div>
+  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/9ad143db-cd17-4fd8-bbbe-6891b1ee9594" width="60%">
+</div>
+
+<div align="center">
   <h3>Seleção de personagens</h3>
   <div align="left">
     <p>A página contém diversos personagens para que o usuário escolha o que melhor lhe representa</p>
