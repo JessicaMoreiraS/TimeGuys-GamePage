@@ -77,3 +77,5 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
   <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/f992598c-bd45-403a-8d23-07248618cf2e" width="60%">
 </div>
 
+<br><br>
+<p>Esse projeto foi desenvolvido para fins de aprendizado sem uso comercial, os direitos de imagens são exclusivos de seus respctivos dententores</p>
