@@ -42,7 +42,7 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
     <p>Na área superior conta com a opção de música caso o jogador deseje</p>
     <p>Chame seus amigos para jogar com você!</p>
   </div>
-  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/17513d38-a7ff-4b8e-9050-67f96f627fe3" width="80%">
+  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/17513d38-a7ff-4b8e-9050-67f96f627fe3" width="60%">
 </div>
 
 <div align="center">
@@ -50,7 +50,7 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
   <div align="left">
     <p>O jogo consiste em usar a criatividade para trocar os nomes de filmes por nomes divertidos</p>
   </div>
-  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/62b243d8-c10a-471e-a188-0630d55528f6" width="80%">
+  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/62b243d8-c10a-471e-a188-0630d55528f6" width="60%">
 </div>
 
 <div align="center">
@@ -59,6 +59,6 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
     <p>A página contém diversos personagens para que o usuário escolha o que melhor lhe representa</p>
     <p>O personagem escolhido será exibido na página Home dos jogos e no card do Jogo Gartic</p>
   </div>
-  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/f992598c-bd45-403a-8d23-07248618cf2e" width="80%">
+  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/f992598c-bd45-403a-8d23-07248618cf2e" width="60%">
 </div>
 
