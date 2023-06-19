@@ -44,6 +44,13 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
   </div>
   <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/17513d38-a7ff-4b8e-9050-67f96f627fe3" width="60%">
 </div>
+<div align="center">
+  <h3>Jogo Da Forca</h3>
+  <div align="left">
+    <p>Nesse jogo o usuário deve acertar a palavra, errando o menor numero de letras que a palavra contém para que o personagem não seja inforcado</p>
+  </div>
+  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/dfc45d96-6248-40f2-9fba-a51fc628d5cb"width="60%">
+</div>
 
 <div align="center">
   <h3>Jogo Troca De Palavras</h3>
