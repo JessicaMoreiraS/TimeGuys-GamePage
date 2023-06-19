@@ -78,4 +78,4 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
 </div>
 
 <br><br>
-<p>Esse projeto foi desenvolvido para fins de aprendizado sem uso comercial, os direitos de imagens são exclusivos de seus respctivos dententores</p>
+<p>Esse projeto foi desenvolvido para fins de aprendizado, sem uso comercial, os direitos de imagens são exclusivos de seus respctivos dententores</p>
