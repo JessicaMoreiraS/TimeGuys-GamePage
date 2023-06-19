@@ -42,7 +42,7 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
     <p>Na área superior conta com a opção de música caso o jogador deseje</p>
     <p>Chame seus amigos para jogar com você!</p>
   </div>
-  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/17513d38-a7ff-4b8e-9050-67f96f627fe3" width="60%">
+  <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/eb099575-a69f-4445-8c42-a42fe7b88663" width="60%">
 </div>
 <div align="center">
   <h3>Jogo Da Forca</h3>
