@@ -24,7 +24,7 @@
 criar conta:
 https://cadastrochat-jessicamoreiraroso.b4a.run/-->
 <br>
-<h3>Acesse:https://timeguys-jessicamoreiraroso.b4a.run/<h3>
+<h3>Acesse: https://timeguys-jessicamoreiraroso.b4a.run/<h3>
 <div align="center">
   <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/48c33f9d-d357-46d0-bdf9-fdfb16dba2d9" width="60%">
   <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/01b95f70-46e8-44d2-9e6a-5de6eaa37914" width="60%">
