@@ -31,6 +31,7 @@ https://cadastrochat-jessicamoreiraroso.b4a.run/-->
   <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/42e9a3ff-bd8f-4f11-a363-a5d1c259641a"width="60%">
 </div>
 <hr>
+<br>
 <div align="center">
   <h3>Jogo Gartic</h3>
   <div align="left">
