@@ -49,9 +49,9 @@ function confere(){
             sResposta = "Sorvete Ganhol!!!";
             iPontosO++;
             document.getElementById("bola").innerHTML = "Pontos Sorvete: " + iPontosO;
-            if(iPontosO == 5){
+            if(iPontosO == 3){
                 Swal.fire({
-                    title: 'Sorvete🍦 ganhol 5 vezes e é o campião!',
+                    title: 'Sorvete🍦 ganhol 3 vezes e é o campião!',
                     imageUrl: 'imagens/campiao.gif',
                     imageWidth: 400,
                     imageHeight: 200,
@@ -68,9 +68,9 @@ function confere(){
             sResposta = "Batata Frita Ganhol!!!";
             iPontosX++;
             document.getElementById("xis").innerHTML = "Pontos Batata Frita: " + iPontosX;
-            if(iPontosX == 5){
+            if(iPontosX == 3){
                 Swal.fire({
-                    title: 'Batata Frita🍟 ganhol 5 vezes e é o campião!',
+                    title: 'Batata Frita🍟 ganhol 3 vezes e é o campião!',
                     imageUrl: 'imagens/campiao.gif',
                     imageWidth: 400,
                     imageHeight: 200,
