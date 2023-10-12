@@ -10,7 +10,7 @@
             "nome":"Forca",
             "imagem":"forca.png",
             "descricao":"Consegue descobrir a palavra? Tente salvar o Jellybean da forca!",
-            "link":"jogoForca/index.html"
+            "link":"JogoForca/index.html"
         },
         {
             "nome":"Troca de palavras",
@@ -22,7 +22,7 @@
             "nome":"Jogo da velha",
             "imagem":"oJogoDaVelha.jpg",
             "descricao":"Vamos ver quem consegue vencer esse jogo da velha? Chame alguém para jogar com você!",
-            "link":"jogoDaVelha/index.html"
+            "link":"JogoDaVelha/index.html"
         },
         {
             "nome":"Seleção de personagem",
