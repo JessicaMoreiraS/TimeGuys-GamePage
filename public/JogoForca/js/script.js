@@ -1,4 +1,4 @@
-var sPerguntas = [['CARAMBOLA',     'FRUTA'],        ['JABOTICABA',     'FRUTA'], 
+var sPerguntas = [['CARAMBOLA',     'FRUTA'],        ['JABUTICABA',     'FRUTA'], 
                 ['JAMBO',           'FRUTA'],        ['CUPUAÇU',        'FRUTA'],
                 ['PITOMBA',         'FRUTA'],        ['FORTALEZA',      'CIDADE'],
                 ['HOLAMBRA',        'CIDADE'],       ['TERESOPOLIS',    'CIDADE'],
@@ -94,7 +94,12 @@ function criaLetras (sPalavra){
 
 function sorteia(){
     for(var m=0; m<sPerguntas.length; m++){
-        iSorteados.push(m);
+        x = Math.random()* sPerguntas.length-1 + 0;
+        if(!iSorteados.includes()){
+          iSorteados.push(x);
+        }else{
+          m--;
+        }
     }
     iSorteados = shuffleArray(iSorteados);
     criaLetras(sPerguntas[iSorteados[iJogada]][0]);
