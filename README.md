@@ -12,19 +12,15 @@
 </ul>
 <p>Obs: Para melhor funcionamento dos jogos:</p>
 <ol>
-  <li>Baixe o arquivo</li>
-  <li>Descompacte o arquivo</li>
-  <li>Abra o terminal no diretório/pasta</li>
+  <li>Baixe ou clone o arquivo</li>
+  <li>Abra o terminal (CMD) no diretório/pasta</li>
   <li>Use o comando "<i>node server.js</i>"</li>
   <li>Acesse "<i>https://localhost:3000</i>"</li>
   <li>Para outras pessoas na mesma rede acessarem, acesse o IP da maquina que iníciou o programa + "<i>:3000</i>"</li>
 </ol>
 
-<!--
-criar conta:
-https://cadastrochat-jessicamoreiraroso.b4a.run/-->
-<br>
-<h3>Acesse: https://timeguys-jessicamoreiraroso.b4a.run/<h3>
+<br/>
+<p>Acesse: https://timeguys-jessicamoreiraroso.b4a.run/</p>
 <div align="center">
   <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/48c33f9d-d357-46d0-bdf9-fdfb16dba2d9" width="60%">
   <img src="https://github.com/JessicaMoreiraS/TimeGuys-GamePage/assets/100448388/01b95f70-46e8-44d2-9e6a-5de6eaa37914" width="60%">
