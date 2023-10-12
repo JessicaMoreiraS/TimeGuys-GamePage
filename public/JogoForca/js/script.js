@@ -94,7 +94,7 @@ function criaLetras (sPalavra){
 
 function sorteia(){
     for(var m=0; m<sPerguntas.length; m++){
-        x= Math.random()* sPerguntas.length-1 + 0;
+        x= (int)(Math.random()* sPerguntas.length-1 + 0);
         console.log(x);
         iSorteados.push(m);   
        
