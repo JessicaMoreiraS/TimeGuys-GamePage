@@ -94,11 +94,11 @@ function criaLetras (sPalavra){
 
 function sorteia(){
     for(var m=0; m<sPerguntas.length; m++){
-        x = Math.random()* sPerguntas.length-1 + 0;
-        if(!iSorteados.includes()){
-          iSorteados.push(x);
+        x= Math.random()* sPerguntas.length-1 + 0;
+        if(!iSorteados.includes(x)){
+            iSorteados.push(x);   
         }else{
-          m--;
+            m=m-1;
         }
     }
     iSorteados = shuffleArray(iSorteados);
